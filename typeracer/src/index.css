@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle, #1a1a1a, #050505);
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.game {
+  text-align: center;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  color: cyan;
+
+  text-shadow:
+    0 0 5px cyan,
+    0 0 10px cyan,
+    0 0 20px cyan;
+}
+
+h2 {
+  margin: 10px;
+}
+
+input {
+  width: 300px;
+  padding: 12px;
+
+  font-size: 20px;
+
+  border: 2px solid cyan;
+  border-radius: 10px;
+
+  background: black;
+  color: cyan;
+
+  outline: none;
+
+  box-shadow:
+    0 0 10px cyan;
+}
+
+.game-area {
+  width: 800px;
+  height: 500px;
+
+  margin: 20px auto;
+
+  border: 2px solid cyan;
+  border-radius: 12px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,255,255,0.05),
+      rgba(0,0,0,0.2)
+    );
+
+  box-shadow:
+    0 0 20px cyan;
+}
+
+.word {
+  position: absolute;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  color: #00ffff;
+
+  text-shadow:
+    0 0 5px cyan,
+    0 0 10px cyan,
+    0 0 20px cyan;
+
+  animation: pulse 1s infinite alternate;
+}
+
+button {
+  padding: 12px 24px;
+
+  font-size: 18px;
+
+  background: black;
+  color: cyan;
+
+  border: 2px solid cyan;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 10px cyan;
+}
+
+button:hover {
+  background: cyan;
+  color: black;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+.background-grid {
+  position: absolute;
+
+  width: 100%;
+  height: 200%;
+
+  background-image:
+    linear-gradient(
+      rgba(0,255,255,0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0,255,255,0.15) 1px,
+      transparent 1px
+    );
+
+  background-size: 40px 40px;
+
+  animation: moveGrid 8s linear infinite;
+
+  z-index: 0;
+}
+@keyframes moveGrid {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-40px);
+  }
+}
+.menu {
+  margin-top: 120px;
+}
+
+.menu p {
+  font-size: 20px;
+  color: #ccc;
+
+  margin-bottom: 30px;
+}
+
+.menu button {
+  font-size: 24px;
+
+  padding: 16px 32px;
+}
